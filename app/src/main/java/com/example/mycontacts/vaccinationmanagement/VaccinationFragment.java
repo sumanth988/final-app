@@ -58,6 +58,7 @@ public class  VaccinationFragment extends Fragment {
     public static final String ADD_DATE="add_intent";
     private static final int ADD_INTENT =1;
     private static final String DATE_ON_ROTATION ="date_on_rotation" ;
+   // private ActivityResultLauncher<Intent> someActivityResultLauncher;
 
 
     RecyclerView recyclerView;
@@ -151,33 +152,7 @@ public class  VaccinationFragment extends Fragment {
                 someActivityResultLauncher.launch(intent);
             }
 
-           ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
-                   new ActivityResultContracts.StartActivityForResult(),
-                   new ActivityResultCallback<ActivityResult>() {
-                       @Override
-                       public void onActivityResult(ActivityResult result) {
-
-
-                           if (result.getResultCode() ==RESULT_CODE_FROM_ADD_TO_MAIN) {
-                               // There are no request codes
-                               Intent data = result.getData();
-                               date = data.getStringExtra(FROM_ADD_TO_MAIN);
-                               try {
-                                   Date date_obj = formatter.parse(date);
-                                   calendar.setTime(date_obj);
-                                   calendarView.setCurrentDate(date_obj);
-                                   // calendarView.setDate(date_obj.getTime());
-                               } catch (ParseException e) {
-                                   e.printStackTrace();
-                               }
-                               adapter.setVaccinationData(db.getAllContactsData(date));
-                               adapter.notifyDataSetChanged();
-                               EventDecorator.setgreenDates(db.getDates(0), calendarView, ContextCompat.getColor(view.getContext(),color.dark_green));
-                               EventDecorator.setRedDates(db.getDates(1), calendarView, ContextCompat.getColor( view.getContext(),color.red));
-                               Log.i(contants.LOG_CAT,"onActivity running sa");
-                           }
-                       }
-                   });
+           //ActivityResultLauncher<Intent>
         });
 
     }
@@ -238,10 +213,10 @@ public class  VaccinationFragment extends Fragment {
             });
 
 
-    public void openSomeActivityForResult() {
-        Intent intent = new Intent(getActivity(), AddEvent.class);
-        someActivityResultLauncher.launch(intent);
-    }
+    //public void openSomeActivityForResult() {
+      //  Intent intent = new Intent(getActivity(), AddEvent.class);
+        //someActivityResultLauncher.launch(intent);
+    //}
 
     /*
     @Override
