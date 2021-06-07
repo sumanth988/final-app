@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditViewActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/editImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@mipmap/pets_img_round"
+                android:layout_centerHorizontal="true"
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/Imb1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/add_photo1"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="270dp"
+                android:layout_marginLeft="250dp"
+                android:background="@color/white"
+                android:onClick="imageHandlerFun"
+                />
+        </FrameLayout>
+
+
+        <EditText
+        android:id="@+id/editPetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/frame1"
+        android:layout_marginLeft="150dp"
+        android:hint="Pet Name"
+        android:ems="10"
+        android:inputType="text"
+            android:layout_alignParentStart="true">
+    </EditText>
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editVaccination"
+        android:layout_below="@+id/editVaccination"
+        android:layout_marginTop="22dp"
+        android:hint="Weight (in kg)"
+        android:ems="10"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/petName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editPetName"
+        android:layout_alignParentLeft="true"
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editAge"
+        android:layout_below="@id/editAge"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:onClick="run"
+        android:text="@string/save" />
+
+    <TextView
+        android:id="@+id/Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editWeight"
+        android:layout_alignLeft="@+id/petName"
+        android:text="@string/weight"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/petBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editPetBreed"
+            android:layout_alignLeft="@+id/petName"
+            android:text="@string/petBreed"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/vaccination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editWeight"
+            android:layout_alignLeft="@+id/petBreed"
+            android:text="@string/gender"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/editPetName"
+            android:layout_below="@+id/editWeight"
+            android:layout_marginTop="30dp"
+            android:hint="Age "
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editAge"
+            android:layout_alignBottom="@+id/editAge"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/editWeight"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editVaccination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editPetName"
+            android:layout_below="@+id/editPetBreed"
+            android:hint="male /Female"
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editPetBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editVaccination"
+            android:layout_below="@+id/editPetName"
+            android:hint="Like dog,cat,rabbit"
+            android:ems="10"
+            android:inputType="text" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constriant_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".AddEvent">
+
+        <Spinner
+            android:id="@+id/petname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.289"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Select Date"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/petname"
+            app:layout_constraintTop_toBottomOf="@+id/petname" />
+
+        <Spinner
+            android:id="@+id/vaccination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/petname"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="add"
+            app:layout_constraintStart_toStartOf="@+id/done"
+            app:layout_constraintTop_toBottomOf="@+id/done" />
+
+        <CheckBox
+            android:id="@+id/done"
+            style="@style/CheckboxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Done"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/vaccination" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add"
+            app:layout_constraintTop_toTopOf="@+id/add" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/petname"
+            app:layout_constraintEnd_toStartOf="@+id/petname"
+            app:layout_constraintTop_toTopOf="@+id/petname"
+            app:srcCompat="@drawable/dog_image_min_removebg_preview__3_" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/vaccination"
+            app:layout_constraintEnd_toStartOf="@+id/vaccination"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/vaccination"
+            app:srcCompat="@drawable/injection_image_min__1_" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
+            app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+            app:layout_constraintTop_toTopOf="@+id/editTextDate"
+            app:srcCompat="@drawable/ic_baseline_date_range_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+
